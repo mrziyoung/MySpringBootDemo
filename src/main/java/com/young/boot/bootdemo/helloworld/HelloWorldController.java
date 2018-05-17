@@ -27,7 +27,7 @@ public class HelloWorldController {
     public User getUser() {
         User user=new User();
         user.setName("小明");
-        user.setWord("xiaoming");
+        user.setWord("xiaoming11");
         return user;
     }
     //从前端获取一个参数，并返回String字符串
