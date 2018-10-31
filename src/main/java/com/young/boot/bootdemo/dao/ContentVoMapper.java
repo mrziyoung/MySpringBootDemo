@@ -1,5 +1,6 @@
 package com.young.boot.bootdemo.dao;
 
+import com.young.boot.bootdemo.model.bo.ArchiveBo;
 import com.young.boot.bootdemo.model.vo.ContentVo;
 import com.young.boot.bootdemo.model.vo.ContentVoExample;
 import java.util.List;
@@ -33,4 +34,8 @@ public interface ContentVoMapper {
     int updateByPrimaryKeyWithBLOBs(ContentVo record);
 
     int updateByPrimaryKey(ContentVo record);
+
+    List<ArchiveBo> findReturnArchiveBo();
+
+    List<ContentVo> findByCatalog(Integer mid);
 }

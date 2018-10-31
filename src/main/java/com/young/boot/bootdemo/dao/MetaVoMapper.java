@@ -1,8 +1,11 @@
 package com.young.boot.bootdemo.dao;
 
+import com.young.boot.bootdemo.dto.MetaDto;
 import com.young.boot.bootdemo.model.vo.MetaVo;
 import com.young.boot.bootdemo.model.vo.MetaVoExample;
 import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface MetaVoMapper {
@@ -27,4 +30,10 @@ public interface MetaVoMapper {
     int updateByPrimaryKeySelective(MetaVo record);
 
     int updateByPrimaryKey(MetaVo record);
+
+    List<MetaDto> selectFromSql(Map<String,Object> paraMap);
+
+    MetaDto selectDtoByNameAndType(String name, String type);
+
+    Integer countWithSql(Integer mid);
 }
